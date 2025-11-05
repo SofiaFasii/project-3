@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <section class="rock-paper-scissors">
+            <div class="rps-container">
+                <h2 class="rps-title">Камінь - ножиці - папір</h2>
+                <div class="rps-buttons">
+                    <button class="rock-btn" onclick="playerChoice('камінь')"></button>
+                    <button class="scissors-btn" onclick="playerChoice('ножиці')"></button>
+                    <button class="paper-btn" onclick="playerChoice('папір')"></button>
+                </div>
+                <p class="rps-result"></p>
+                <button class="computer-option" onclick="playRound()">Варіант комп’ютера</button>
+            </div>
+            <div class="rps-counting">
+                <p class="rps-score">Рахунок:</p>
+                <p class="rps-score-computer">Комп’ютер - 0</p>
+                <p class="rps-score-user">Ви - 0</p>
+            </div>
+        </section>
+
+        <section class="calculator">
+            <h2 class="calculator-title">Калькулятор</h2>
+            <input type="number" class="calculator-first-input" placeholder="Введіть число">
+            <div class="calculator-buttons">
+                <button class="item" onclick="calculatorSetOperation('+')">+</button>
+                <button class="item" onclick="calculatorSetOperation('*')">*</button>
+                <button class="item" onclick="calculatorSetOperation('-')">-</button>
+                <button class="item" onclick="calculatorSetOperation('/')">/</button>
+            </div>
+            <input type="number" class="calculator-second-input" placeholder="Введіть число">
+            <button class="item equals" onclick="calculator()">=</button>
+            <span class="calculator-result">Результат</span>
+        </section>
+
+    </div>
+    <script src="./js/rock-paper-scissors.js"></script>
+    <script src="./js/calculator.js"></script>
+</body>
+
+</html>
