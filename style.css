@@ -8,6 +8,22 @@
     flex-direction: column;
     align-items: center;
 }
+  .visokosniy-h2{
+    width: 283px;
+    height: 20px;
+  }
+  .visokosniy-input{
+    width: 215px;
+    height: 35px;
+    border-radius: 30px;
+    background: gray;
+  }
+  .button-visokosniy{
+    width: 35px;
+    height: 35px;
+    border-radius: 0 20px 20px 0;
+    background: #000000;
+  }
 .rps-buttons button{
     background-position: center;
     background-repeat: no-repeat;
