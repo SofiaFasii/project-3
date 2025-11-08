@@ -22,10 +22,86 @@
                 <p class="rps-result"></p>
                 <button class="computer-option" onclick="playRound()">Варіант комп’ютера</button>
             </div>
+<<<<<<< Updated upstream
             <div class="rps-counting">
                 <p class="rps-score">Рахунок:</p>
                 <p class="rps-score-computer">Комп’ютер - 0</p>
                 <p class="rps-score-user">Ви - 0</p>
+=======
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="main-container" data-inner>
+
+            <h1 class="main-title">Популярні інетрактивні ігри</h1>
+
+            <div class="main-line"></div>
+
+            <section class="year-visokosniy-section">
+                <h2>Перевір в який рік ти народився</h2>
+                <div class="input-box">
+                    <input type="number" class="input-year" id="year-input" placeholder="Введіть рік народження">
+                    <button id="check-btn-year" class="button-year" onclick="result()"></button>
+                </div>
+                    <p id="result-year"></p>
+            </section>
+
+            <section class="rock-paper-scissors">
+                <div class="rps-container">
+                    <h2 class="section-title">Камінь - ножиці - папір</h2>
+                    <div class="rps-buttons">
+                        <button class="section-btn rps-btn" onclick="playerChoice('камінь')"></button>
+                        <button class="section-btn rps-btn" onclick="playerChoice('ножиці')"></button>
+                        <button class="section-btn rps-btn" onclick="playerChoice('папір')"></button>
+                        <div class="rps-counting">
+                            <p class="rps-score">Рахунок:</p>
+                            <p class="rps-score-computer">Комп’ютер - 0</p>
+                            <p class="rps-score-user">Ви - 0</p>
+                        </div>
+                    </div>
+                    <p class="rps-result">Почати раунд &#8681;</p>
+                    <button class="computer-option section-btn" onclick="playRound()">Варіант комп’ютера</button>
+                </div>
+            </section>
+
+            <div class="main-line"></div>
+
+            <section class="calculator">
+                <h2 class="section-title">Калькулятор</h2>
+                <div class="calculator-wrapper">
+                    <input type="number" class="calculator-first-input section-input" placeholder="Введіть число">
+                    <div class="calculator-buttons">
+                        <button class="item section-btn" onclick="calculatorSetOperation('+')">+</button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('*')">*</button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('-')">-</button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('/')">/</button>
+                    </div>
+                    <input type="number" class="calculator-second-input section-input" placeholder="Введіть число">
+                    <button class="item equals section-btn" onclick="calculator()">=</button>
+                    <span class="calculator-result section-input">Результат</span>
+                </div>
+            </section>
+
+            <div class="main-line"></div>
+
+        </div>
+    </main>
+
+    <footer class="footer" data-inner>
+        <a href="#" class="logo"></a>
+        <address class="contacts">
+            Тел: <a href="#">+38 (123) 456 78 90</a><br>
+            E-Mail: <a href="#">codingmagic@gmail.com</a><br>
+            Facebook: <a href="#">CodingMagic</a><br>
+            Twitter: <a href="#">CodingMagic</a><br>
+            Instagram: <a href="#">CodingMagic</a>
+        </address>
+        <form class="form-contact">
+            <div class="footer-box">
+                <input class="section-input" type="text" placeholder="Ваша ел. адреса...">
+                <button class="section-btn">Підписатись</button>
+>>>>>>> Stashed changes
             </div>
         </section>
 
@@ -46,6 +122,7 @@
     </div>
     <script src="./js/rock-paper-scissors.js"></script>
     <script src="./js/calculator.js"></script>
+    <script src="./js/visokosniy.js"></script>
 </body>
 
 </html>
