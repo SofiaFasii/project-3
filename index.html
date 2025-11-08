@@ -4,30 +4,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Coding Magic</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <div class="container">
-
-        <section class="rock-paper-scissors">
-            <div class="rps-container">
-                <h2 class="rps-title">Камінь - ножиці - папір</h2>
-                <div class="rps-buttons">
-                    <button class="rock-btn" onclick="playerChoice('камінь')"></button>
-                    <button class="scissors-btn" onclick="playerChoice('ножиці')"></button>
-                    <button class="paper-btn" onclick="playerChoice('папір')"></button>
+    <header class="header">
+        <div class="header-container" data-inner>
+            <a href="#" class="logo"></a>
+            <nav class="nav">
+                <div class="dropdown">
+                    <button class="drop-btn">
+                        <span>Інтерактив</span><span class="arrow"><img src="./img/header-arrow.svg" alt="#"></span>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Числовий</a>
+                        <a href="#">Ігровий</a>
+                        <a href="#">Ознайомчий</a>
+                    </div>
                 </div>
-                <p class="rps-result"></p>
-                <button class="computer-option" onclick="playRound()">Варіант комп’ютера</button>
+                <a href="#">Наша команда</a>
+                <a href="#">Контакти</a>
+            </nav>
+            <div class="header-group">
+                <button class="theme-toggle" id="theme-toggle"></button>
+                <p>Вітаємо, <span id="username">User</span>!</p>
             </div>
-<<<<<<< Updated upstream
             <div class="rps-counting">
                 <p class="rps-score">Рахунок:</p>
                 <p class="rps-score-computer">Комп’ютер - 0</p>
                 <p class="rps-score-user">Ви - 0</p>
-=======
         </div>
     </header>
 
@@ -101,7 +112,6 @@
             <div class="footer-box">
                 <input class="section-input" type="text" placeholder="Ваша ел. адреса...">
                 <button class="section-btn">Підписатись</button>
->>>>>>> Stashed changes
             </div>
         </section>
 
@@ -114,12 +124,11 @@
                 <button class="item" onclick="calculatorSetOperation('-')">-</button>
                 <button class="item" onclick="calculatorSetOperation('/')">/</button>
             </div>
-            <input type="number" class="calculator-second-input" placeholder="Введіть число">
-            <button class="item equals" onclick="calculator()">=</button>
-            <span class="calculator-result">Результат</span>
-        </section>
+            <small>*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</small>
+        </form>
+    </footer>
 
-    </div>
+    <script src="./js/index.js"></script>
     <script src="./js/rock-paper-scissors.js"></script>
     <script src="./js/calculator.js"></script>
     <script src="./js/visokosniy.js"></script>
