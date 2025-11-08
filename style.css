@@ -26,3 +26,43 @@
 .paper-btn{
     background-image: url(./img/paper.svg);
 }
+
+   /* number sect */
+
+body {
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background: #fff;
+}
+
+.inputs {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: #d3d3d3;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 2px 2px 5px #aaa;
+    text-align: center;
+    width: 150px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+input:focus {
+    background: #e0e0e0;
+    box-shadow: 2px 2px 8px #888;
+}
+
+.result {
+    margin-top: 40px;
+    font-size: 18px;
+}
+        /* number sect */
