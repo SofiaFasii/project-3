@@ -150,6 +150,25 @@ a{
     border-radius: 50%;
 }
 /* ---- main ---- */
+.main{
+    background-color: #cacaca4d;
+}
+.main-container{
+    padding: 30px 0 42px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-title{
+    font-size: 24px;
+    font-weight: 500;
+}
+.main-line{
+    margin: 36px 0;
+    width: 536px;
+    height: 1px;
+    background-color: #000000;
+}
 .year-visokosniy-section{
     width: 576px;
 }
@@ -177,24 +196,46 @@ a{
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
     cursor: pointer;
 }
-.main{
-    background-color: #cacaca4d;
+.computer-number {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    margin: 40px auto;
 }
-.main-container{
-    padding: 30px 0 42px 0;
-    display: flex;
-    flex-direction: column;
+        
+.computer-number h2 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    }
+.number-box {
+    display: inline-flex;
     align-items: center;
+    background: #e5e5e5;
+    border-radius: 25px;
+    overflow: hidden;
 }
-.main-title{
-    font-size: 24px;
+.number-box input {
+    border: none;
+    background: transparent;
+    padding: 10px 15px;
+    width: 150px;
+    font-size: 14px;
+    outline: none;
+}
+.number-box button {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.number-box button:hover {
+    opacity: 0.8;
+}
+#message {
+    margin-top: 15px;
+    color: #1db954;
     font-weight: 500;
-}
-.main-line{
-    margin: 36px 0;
-    width: 536px;
-    height: 1px;
-    background-color: #000000;
 }
 .rock-paper-scissors{
     display: flex;
