@@ -1,4 +1,6 @@
-const inputs = document.querySelectorAll('input');
+
+function checkButton() {
+  const inputs = document.querySelectorAll('input');
 const output = document.getElementById('max');
 
 inputs.forEach(input => {
@@ -16,4 +18,4 @@ inputs.forEach(input => {
     output.textContent = maxValue;
   });
 });
-
+}

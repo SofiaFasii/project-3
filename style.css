@@ -66,3 +66,53 @@ input:focus {
     font-size: 18px;
 }
         /* number sect */
+
+
+        /* computernumber sect */
+                .computer-number {
+                    text-align: center;
+                    font-family: "Inter", sans-serif;
+                    margin: 40px auto;
+                }
+        
+                .computer-number h2 {
+                    font-size: 18px;
+                    margin-bottom: 20px;
+                }
+        
+                .number-box {
+                    display: inline-flex;
+                    align-items: center;
+                    background: #e5e5e5;
+                    border-radius: 25px;
+                    overflow: hidden;
+                }
+        
+                .number-box input {
+                    border: none;
+                    background: transparent;
+                    padding: 10px 15px;
+                    width: 150px;
+                    font-size: 14px;
+                    outline: none;
+                }
+        
+                .number-box button {
+                    background: black;
+                    color: white;
+                    border: none;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                    transition: 0.2s;
+                }
+        
+                .number-box button:hover {
+                    opacity: 0.8;
+                }
+        
+                #message {
+                    margin-top: 15px;
+                    color: #1db954;
+                    font-weight: 500;
+                }
+                                /* computernumber sect */
