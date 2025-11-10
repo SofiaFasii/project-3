@@ -8,17 +8,16 @@ btn.addEventListener("click", () => {
 
     if (!userGuess ||  userGuess < 1 ||  userGuess > 100) {
     message.textContent = "Введіть число від 1 до 100!";
-    message.style.color = "red";
+    message.style.color = "#990000";
 } else if (userGuess === randomNumber) {
     message.textContent = `Вітаю, ви вгадали число!(${ randomNumber })`;
     message.style.color = "#1db954";
-    btn.textContent = "🔁";
     btn.onclick = () => location.reload();
 } else if (userGuess < randomNumber) {
     message.textContent = "Більше!";
-    message.style.color = "#333";
+    message.style.color = "#727000ff";
 } else {
     message.textContent = "Менше!";
-    message.style.color = "#333";
+    message.style.color = "#727000ff";
 }
 });

@@ -169,6 +169,7 @@ a{
     height: 1px;
     background-color: #000000;
 }
+
 .year-visokosniy-section{
     width: 576px;
 }
@@ -187,6 +188,7 @@ a{
 .input-btn{
     padding: 0;
     width: 35px;
+    height: 35px;
     border: none;
     border-radius: 0 20px 20px 0;
     background-position: center;
@@ -196,47 +198,24 @@ a{
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
     cursor: pointer;
 }
-.computer-number {
-    text-align: center;
-    font-family: "Inter", sans-serif;
-    margin: 40px auto;
+
+.computernumber{
+    width: 576px;
 }
-        
-.computer-number h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
-    }
-.number-box {
-    display: inline-flex;
+.comp-num-wrapper{
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    background: #e5e5e5;
-    border-radius: 25px;
-    overflow: hidden;
 }
-.number-box input {
-    border: none;
-    background: transparent;
-    padding: 10px 15px;
-    width: 150px;
-    font-size: 14px;
-    outline: none;
+.number-box{
+    display: flex;
+    align-items: center;
 }
-.number-box button {
-    background: black;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    transition: 0.2s;
+.number-input{
+    width: 180px;
+    border-radius: 20px 0 0 20px;
 }
-.number-box button:hover {
-    opacity: 0.8;
-}
-#message {
-    margin-top: 15px;
-    color: #1db954;
-    font-weight: 500;
-}
+
 .rock-paper-scissors{
     display: flex;
     flex-direction: column;
@@ -281,6 +260,7 @@ a{
 .rps-result{
     padding: 36px 0;
 }
+
 .calculator-wrapper{
     display: flex;
     justify-content: center;
@@ -289,10 +269,10 @@ a{
 }
 .calculator .section-input{
     font-weight: 400;
-    color: #7E7E7E;
     text-align: center;
     padding: 10px 20px;
     width: 135px;
+    color: #7E7E7E;
 }
 .calculator .section-input:last-child{
     width: 118px;
