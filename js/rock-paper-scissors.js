@@ -7,11 +7,9 @@ const rpsResult = document.querySelector('.rps-result')
 const playerChoice = (choice) => rpsPlayerSelection = choice; 
 
 function playRound(){
-    rpsResult.classList.remove('draw', 'success', 'failure');
-    
     if(!rpsPlayerSelection){
         rpsResult.textContent = 'Спочатку оберіть свій хід!';
-        rpsResult.classList.add('failure');
+        rpsResult.style.color = '#990000';
         return;
     }
 
@@ -20,16 +18,16 @@ function playRound(){
 
     if(rpsPlayerSelection === compSelection){
         rpsResult.textContent = 'Нічія';
-        rpsResult.classList.add('draw') ;
+        rpsResult.style.color = '#727000ff';
     }
     else if(rpsPlayerSelection === 'ножиці' && compSelection === 'папір' || rpsPlayerSelection === 'папір' && compSelection === 'камінь' || rpsPlayerSelection === 'камінь' && compSelection === 'ножиці'){
         rpsResult.textContent = 'Ви виграли раунд!';
-        rpsResult.classList.add('success');
+        rpsResult.style.color = '#039900';
         rpsPlayerScore++;
     }
     else{
         rpsResult.textContent = 'Комп’ютер виграв раунд!';
-        rpsResult.classList.add('failure');
+        rpsResult.style.color = '#990000';
         rpsCompScore++;
     }
     document.querySelector('.rps-score-computer').textContent = `Комп’ютер - ${rpsCompScore}`

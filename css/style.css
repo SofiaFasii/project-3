@@ -25,9 +25,12 @@ body{
     color: #000000;
 }
 .section-input{
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 10px;
     border: none;
     border-radius: 20px;
     height: 35px;
+    font-size: 12px;
     color: #7E7E7E;
     background-color: #dfdfdf;
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
@@ -37,6 +40,7 @@ body{
     font-size: 12px;
     border: none;
     border-radius: 20px;
+    height: 35px;
     color: #FFFFFF;
     background-color: #000000;
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
@@ -146,6 +150,33 @@ a{
     border-radius: 50%;
 }
 /* ---- main ---- */
+.year-visokosniy-section{
+    width: 576px;
+}
+.yvs-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-box{
+    display: flex;
+}
+.input-year{
+    width: 180px;
+    border-radius: 20px 0 0 20px;
+}
+.input-btn{
+    padding: 0;
+    width: 35px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/dandruff.svg);
+    background-color: #000000;
+    box-shadow: 0px 2px 2px 0px #bdbdbdcb;
+    cursor: pointer;
+}
 .main{
     background-color: #cacaca4d;
 }
@@ -216,8 +247,6 @@ a{
     gap: 38px;
 }
 .calculator .section-input{
-    font-family: "Montserrat Alternates", sans-serif;
-    font-size: 12px;
     font-weight: 400;
     color: #7E7E7E;
     text-align: center;
@@ -234,15 +263,6 @@ a{
     width: 58px;
     height: 60px;
     gap: 6px;
-}
-.success{
-    color: #039900;
-}
-.draw{
-    color:#727000ff;
-}
-.failure{
-    color: #990000;
 }
 /* ---- footer ---- */
 .footer{
