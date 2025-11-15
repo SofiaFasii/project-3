@@ -25,14 +25,18 @@ body{
     color: #000000;
 }
 .section-input{
+    font-family: "Montserrat Alternates", sans-serif;
+    padding: 10px;
     border: none;
     border-radius: 20px;
     height: 35px;
+    font-size: 12px;
     color: #7E7E7E;
     background-color: #dfdfdf;
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
 }
 .section-btn{
+    font-family: "Montserrat Alternates", sans-serif;
     padding: 10px 20px;
     font-size: 12px;
     border: none;
@@ -165,6 +169,52 @@ a{
     height: 1px;
     background-color: #000000;
 }
+
+.year-visokosniy-section{
+    width: 576px;
+}
+.yvs-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-box{
+    display: flex;
+}
+.input-year{
+    width: 180px;
+    border-radius: 20px 0 0 20px;
+}
+.input-btn{
+    padding: 0;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/dandruff.svg);
+    background-color: #000000;
+    box-shadow: 0px 2px 2px 0px #bdbdbdcb;
+    cursor: pointer;
+}
+
+.computernumber{
+    width: 576px;
+}
+.comp-num-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.number-box{
+    display: flex;
+    align-items: center;
+}
+.number-input{
+    width: 180px;
+    border-radius: 20px 0 0 20px;
+}
 .rock-paper-scissors{
     display: flex;
     flex-direction: column;
@@ -223,6 +273,11 @@ a{
     text-align: center;
     padding: 10px 20px;
     width: 135px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px 20px;
+    width: 135px;
+    color: #7E7E7E;
 }
 .calculator .section-input:last-child{
     width: 118px;
@@ -235,18 +290,60 @@ a{
     height: 60px;
     gap: 6px;
 }
-.success{
-    color: #039900;
-}
-.draw{
-    color:#727000ff;
-}
-.failure{
-    color: #990000;
-}
 
 #board {
     background: lightgray;
+  
+.choose-scientist{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.scientists{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    justify-content: center;
+    gap: 36px 59px;
+}
+.cs-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 11px;
+    line-height: 120%;
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background-color: #D9D9D9;
+}
+.cs-buttons{
+    grid-auto-rows: min-content;
+    margin-left: 55px;
+    padding-top: 36px;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 20px 36px;
+}
+.cs-buttons button{
+    text-align: left;
+}
+.cs-buttons button:nth-child(odd){
+    justify-self: end;
+}
+.cs-buttons button:nth-child(even){
+    justify-self: start;
+}
+.cs-buttons button:last-child{
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+.cs-buttons button:nth-child(8){
+    height: 50px;
+}
+.highlight{
+    background-color: green;
 }
 /* ---- footer ---- */
 .footer{
