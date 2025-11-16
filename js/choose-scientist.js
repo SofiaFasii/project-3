@@ -21,43 +21,107 @@ function render(mas) {
         const card = document.createElement('div');
         card.classList.add('cs-card');
         card.id = `scientist-${element.id}`;
-        card.innerHTML = `${element.name} ${element.surname}<br>${element.born}-${element.dead}`
+        card.innerHTML = `${element.name} ${element.surname}<br>${element.born}-${element.dead}<br><p class='cs-age'></p>`
+
+        const age = element.dead - element.born;
+        const ageP = card.querySelector('.cs-age');
+        ageP.textContent = `Вік: ${age}`;
+
         containerScientist.appendChild(card);
     })
 }
 render(scientists)
-//1
-function bornIn19th() {
-    const allCards = document.querySelectorAll('.cs-card');
-    allCards.forEach(card => card.classList.remove('highlight'));
-    for (let i = 0; i < scientists.length; i++) {
-        const scientist = scientists[i];
-        if (scientist.born >= 1801 && scientist.born <= 1900) {
-            const card = document.getElementById(`scientist-${scientist.id}`)
-            if (card) {
-                card.classList.add('highlight')
-            }
-        }
-    }
-}
-//3
-function sortByAge(){
-    const allCards = document.querySelectorAll('.cs-card');
-    allCards.forEach(card => card.classList.remove('highlight'));
 
-    const sortedScientists = [...scientists].sort((a, b) => {
+function clearH(){
+    document.querySelectorAll('.cs-card').forEach(card => card.classList.remove('highlight'));
+}
+//1
+document.querySelector('.born-in-19th').addEventListener('click', () => {
+    clearH()
+    scientists.forEach(scientist => {
+       if (scientist.born >= 1801 && scientist.born <= 1900) {
+            const card = document.getElementById(`scientist-${scientist.id}`)
+            card.classList.add('highlight')
+        } 
+    })
+});
+//2
+document.querySelector('.sort-by-abc').addEventListener('click', () => {
+    clearH()
+    setTimeout(() => {
+        const sortedScientists = [...scientists].sort((a, b) => a.name.localeCompare(b.name));
+        render(sortedScientists);
+    },200);
+});
+//3
+document.querySelector('.sort-by-age').addEventListener('click', () => {
+    clearH()
+    setTimeout(() => {
+        const sortedScientists = [...scientists].sort((a, b) => {
         const ageA = a.dead - a.born;
         const ageB = b.dead - b.born;
-        return ageA - ageB;
-    });
-    render(sortedScientists);
-}
+        return ageB - ageA;
+        });
+        render(sortedScientists);
+    },200)
+});
+//4
+document.querySelector('.late-born').addEventListener('click', () => {
+    clearH()
+    const lateBorn = scientists.reduce((a, b) => {
+        return b.born > a.born ? b : a;
+    }, scientists[0]);
+    const card = document.getElementById(`scientist-${lateBorn.id}`);
+    card.classList.add('highlight');
+});
 //5
-function yearAlbert() {
-    const allCards = document.querySelectorAll('.cs-card');
-    allCards.forEach(card => card.classList.remove('highlight'));
-    const albertCard = document.getElementById('scientist-1');
-    if (albertCard) {
-        albertCard.classList.add('highlight');
-    }
-}
+document.querySelector('.year-albert').addEventListener('click', () => {
+    clearH()
+    const card = document.getElementById('scientist-1');
+    card.classList.add('highlight');
+});
+//6
+document.querySelector('.surname-c').addEventListener('click', () => {
+    clearH()
+    scientists.forEach(scientist => {
+        if(scientist.surname[0].toUpperCase() === 'C'){
+            const card = document.getElementById(`scientist-${scientist.id}`);
+            card.classList.add('highlight')
+        }
+    })
+});
+//7
+document.querySelector('.name-a').addEventListener('click', () => {
+    clearH()
+    scientists.forEach(scientist => {
+        if(scientist.name[0].toUpperCase() === 'A'){
+            const card = document.getElementById(`scientist-${scientist.id}`);
+            card.classList.add('highlight')
+        }
+    })
+});
+//8
+document.querySelector('.long-and-short').addEventListener('click', () => {
+    clearH()
+    const longLive = scientists.reduce((longest, current) => {
+        return current.dead - current.born > longest.dead - longest.born ? current : longest;
+    });
+    const shortLive = scientists.reduce((shortest, current) => {
+        return current.dead - current.born < shortest.dead - shortest.born ? current : shortest;
+    });
+
+    const cardL = document.getElementById(`scientist-${longLive.id}`);
+    const cardS = document.getElementById(`scientist-${shortLive.id}`);
+    cardL.classList.add('highlight');
+    cardS.classList.add('highlight');
+})
+//9
+document.querySelector('.coincidence').addEventListener('click', () => {
+    clearH()
+    scientists.forEach(scientist =>{
+        if(scientist.name[0].toUpperCase() === scientist.surname[0].toUpperCase()){
+            const card = document.getElementById(`scientist-${scientist.id}`);
+            card.classList.add('highlight')
+        }
+    })
+})

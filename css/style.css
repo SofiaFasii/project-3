@@ -308,6 +308,7 @@ a{
 }
 .cs-card{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -317,6 +318,9 @@ a{
     height: 100px;
     border-radius: 20px;
     background-color: #D9D9D9;
+    border: solid 1px transparent;
+    box-shadow: 0 0 0px 0 transparent;
+    transition: box-shadow .3s ease, border .3s ease, background-color .3s ease;
 }
 .cs-buttons{
     grid-auto-rows: min-content;
@@ -344,7 +348,9 @@ a{
     height: 50px;
 }
 .highlight{
-    background-color: green;
+    border: solid 1px #a078fd;
+    background-color: #ccc1e69c;
+    box-shadow: 0 0 20px 0 #5d34bd;
 }
 /* ---- footer ---- */
 .footer{
