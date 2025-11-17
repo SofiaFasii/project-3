@@ -74,7 +74,7 @@
 
 
             <div class="main-line"></div>
-          
+
             <section class="rock-paper-scissors">
                 <div class="rps-container">
                     <h2 class="section-title">Камінь - ножиці - папір</h2>
@@ -117,7 +117,7 @@
                 <h2 class="time-h2 section-title">Калькулятор часу</h2>
                 <div class="time-input-box">
                     <input type="number" class="time-input" id="input-time" placeholder="Введіть число">
-                    <button class="time-button" id="check-time-btn" ></button>
+                    <button class="time-button" id="check-time-btn"></button>
                 </div>
                 <p id="time-result"></p>
             </section>
@@ -136,16 +136,32 @@
             </section>
 
             <div class="main-line"></div>
-            
-            <section class="team">
+
+            <section class="dino">
                 <h2 class="dino-h2 section-title">Google динозавр</h2>
                 <canvas id="board"></canvas>
             </section>
 
             <div class="main-line"></div>
 
+            <section class="foodball">
+                <div class="container">
+                    <h2>Футбол</h2>
+                    <div class="pitch" id="pitch">
+                        <div class="ball" id="ball" aria-hidden="true">
+                            <img src="./img/football.png" width="50" height="50" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section class="team">
                 <h2 class="section-title">Наша команда</h2>
+
+                <div class="carousel-wrapper">
+                    <div class="arrow"></div>
+                    <div class="arrow"></div>
+                </div>
             </section>
 
             <div class="main-line"></div>
@@ -159,12 +175,15 @@
                     <button class="section-btn born-in-19th">Які вчені народилися в 19 ст.</button>
                     <button class="section-btn year-albert">Знайти рік народження Albert Einshtein</button>
                     <button class="section-btn sort-by-abc">Відсортувати вчених за алфавітом</button>
-                    <button class="section-btn surname-c">Знайти вчених, прізвища яких починаються на на літеру “С” </button>
+                    <button class="section-btn surname-c">Знайти вчених, прізвища яких починаються на на літеру “С”
+                    </button>
                     <button class="section-btn sort-by-age">Відсортувати вчених за кількістю прожитих років</button>
                     <button class="section-btn name-a">Знайти всіх вчених, ім’я яких починається на “А”</button>
                     <button class="section-btn late-born">Знайти вченого, який народився найпізніше</button>
-                    <button class="section-btn long-and-short">Знайти вченого, який прожив найдовше і вченого,<br> який прожив найменше</button>
-                    <button class="section-btn coincidence">Знайти вчених, в яких співпадають перші літери імені і прізвища</button>
+                    <button class="section-btn long-and-short">Знайти вченого, який прожив найдовше і вченого,<br> який
+                        прожив найменше</button>
+                    <button class="section-btn coincidence">Знайти вчених, в яких співпадають перші літери імені і
+                        прізвища</button>
                 </div>
             </section>
         </div>
@@ -195,7 +214,9 @@
     <script src="./js/calculator.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/dino.js"></script>
+    <script src='./js/foodball.js'></script>
     <script src="./js/three-number.js"></script>
+    <script src="./js/carousel.js"></script>
     <script src="./js/choose-scientist.js"></script>
 </body>
 
