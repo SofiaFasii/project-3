@@ -96,13 +96,14 @@ function update() {
         }
    
     }
-}
+
 
 //score
-context.fillStyle="black";
+
 context.font="20px courier";
 score++;
 context.fillText(score, 5, 20);
+}
 
 function moveDino(e){
     if (gameOver) {
@@ -112,6 +113,7 @@ function moveDino(e){
     if ((e.code == "Space" || e.code == "ArrowUp") && dino.y == dinoY) {
         velocityY = -10
     }
+    
 }
 
 function placeCactus() {
@@ -120,7 +122,7 @@ function placeCactus() {
         img : null,
         x : cactusX,
         y : cactusY,
-        with : null,
+        width : null,
         height : cactusHeight
     }
     let placeCactusChance = Math.random()
