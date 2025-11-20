@@ -1,5 +1,10 @@
 @import 'reset.css';
 
+:root {
+    --pitch-bg: #5ABB58;
+    --border: #111;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -336,14 +341,23 @@ a {
     height: 60px;
     gap: 6px;
 }
+.time-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.time-input-box{
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+.input-time{
+    width: 125px;
+    border-radius: 20px 0 0 20px;
+}
 
 #board {
     background: lightgray;
-}
-
-:root {
-    --pitch-bg: #5ABB58;
-    --border: #111;
 }
 .pitch {
     background: var(--pitch-bg);
@@ -424,33 +438,72 @@ height: 20px;
     color: black;
     margin-top: 8px;
 }
-
-.carousel-wrapper{
+.team{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.slider-wrapper{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
-.carousel-arrow{
+.sliders{
+    display: flex;
+    transition: transform .5s ease;
+    width: 100%;
+}
+.slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    height: 400px;
+}
+.slider-arrow{
     width: 40px;
     height: 90px;
-    background-image: url(../img/carousel-arrow.svg);
+    background-image: url(../img/slider-arrow.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     cursor: pointer;
 }
-.carousel-arrow:last-child{
+.slider-arrow:last-child{
     transform: rotate(180deg);
 }
-.slide{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.slide img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background-color: #a7a7a7;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
 }
-.s-active{
-    display: flex;
+.slide h3{
+    padding: 20px 0 20px 0;
+    font-size: 14px;
+    font-weight: 500;
 }
+.points{
+    padding-top: 15px;
+}
+.points span{
+    display: inline-block;
+    width: 25px;
+    height: 4px;
+    background: #ccc;
+    margin: 3px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.points span.s-active {
+    background: #555;
+}
+
 .choose-scientist {
     display: flex;
     flex-direction: column;

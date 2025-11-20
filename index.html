@@ -125,8 +125,8 @@
             <section class="time-section">
                 <h2 class="time-h2 section-title">Калькулятор часу</h2>
                 <div class="time-input-box">
-                    <input type="number" class="time-input" id="input-time" placeholder="Введіть число" />
-                    <button class="time-button" id="check-time-btn"></button>
+                    <input type="number" class="input-time section-input" id="input-time" placeholder="Введіть число" />
+                    <button class="input-btn" id="check-time-btn"></button>
                 </div>
                 <p id="time-result"></p>
             </section>
@@ -172,29 +172,32 @@
             <section class="team">
                 <h2 class="section-title">Наша команда</h2>
 
-                <div class="carousel-wrapper">
-                    <div class="carousel-arrow"></div>
+                <div class="slider-wrapper">
+                    <div class="slider-arrow left-arrow"></div>
 
-                    <div class="slide s-active">
-                        <img src="#" alt="" />
-                        <h3>Ім’я студента1</h3>
-                        <p>Інформація про роботу, яку він/вона виконав/ла</p>
+                    <div class="sliders">
+                        <div class="slide s-active">
+                            <img src="#" alt="" />
+                            <h3>Ім’я студента1</h3>
+                            <p>Інформація про роботу, яку він/вона виконав/ла</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="#" alt="" />
+                            <h3>Ім’я студента2</h3>
+                            <p>Інформація про роботу, яку він/вона виконав/ла</p>
+                        </div>
+
+                        <div class="slide">
+                            <img src="#" alt="" />
+                            <h3>Ім’я студента3</h3>
+                            <p>Інформація про роботу, яку він/вона виконав/ла</p>
+                        </div>
                     </div>
 
-                    <div class="slide">
-                        <img src="#" alt="" />
-                        <h3>Ім’я студента2</h3>
-                        <p>Інформація про роботу, яку він/вона виконав/ла</p>
-                    </div>
-
-                    <div class="slide">
-                        <img src="#" alt="" />
-                        <h3>Ім’я студента3</h3>
-                        <p>Інформація про роботу, яку він/вона виконав/ла</p>
-                    </div>
-
-                    <div class="carousel-arrow"></div>
+                    <div class="slider-arrow right-arrow"></div>
                 </div>
+                <div class="points"></div>
             </section>
 
             <div class="main-line"></div>
@@ -259,13 +262,14 @@
 
     <script src="./js/index.js"></script>
     <script src="./js/visokosniy.js"></script>
-    <script src="./js/three-number.js"></script>
+    <script src="./js/computernumber.js"></script>
     <script src="./js/rock-paper-scissors.js"></script>
     <script src="./js/calculator.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/dino.js"></script>
     <script src="./js/foodball.js"></script>
-    <script src="./js/computernumber.js"></script>
+    <script src="./js/three-number.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/choose-scientist.js"></script>
 </body>
 
