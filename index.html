@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Magic</title>
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="#" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -16,21 +17,30 @@
 <body>
     <header class="header">
         <div class="header-container" data-inner>
-            <a href="#" class="logo"></a>
-            <nav class="nav">
-                <div class="dropdown">
-                    <button class="drop-btn">
-                        <span>Інтерактив</span><span class="arrow"><img src="./img/header-arrow.svg" alt="#" /></span>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Числовий</a>
-                        <a href="#">Ігровий</a>
-                        <a href="#">Ознайомчий</a>
+            <div class="header-wrapper">
+                <a href="#" class="logo"></a>
+                <nav class="nav">
+                    <div class="dropdown">
+                        <button class="drop-btn">
+                            <span>Інтерактив</span><span class="arrow"><img src="./img/header-arrow.svg"
+                                    alt="#" /></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#visokosniy">Перевір рік народження</a>
+                            <a href="#computernumber">Вгадай число</a>
+                            <a href="#rps">Камінь-ножиці-папір</a>
+                            <a href="#calculator">Калькулятор</a>
+                            <a href="#time-section">Калькулятор часу</a>
+                            <a href="#dino">Google динозавр</a>
+                            <a href="#foodball">Футбол</a>
+                            <a href="#three-number">Введіть<br>3 числа</a>
+                            <a href="#choose-scientist">Обери вченого/их</a>
+                        </div>
                     </div>
-                </div>
-                <a href="#">Наша команда</a>
-                <a href="#">Контакти</a>
-            </nav>
+                    <a href="#team">Наша команда</a>
+                    <a href="#footer">Контакти</a>
+                </nav>
+            </div>
             <div class="header-group">
                 <button class="theme-toggle" id="theme-toggle"></button>
                 <p>Вітаємо, <span id="username">User</span>!</p>
@@ -44,7 +54,7 @@
 
             <div class="main-line"></div>
 
-            <section class="year-visokosniy-section">
+            <section class="year-visokosniy-section" id="visokosniy">
                 <h2 class="section-title">Перевір в який рік ти народився</h2>
                 <div class="yvs-wrapper">
                     <div class="input-box">
@@ -72,7 +82,7 @@
 
             <div class="main-line"></div>
 
-            <section class="rock-paper-scissors">
+            <section class="rock-paper-scissors" id="rps">
                 <div class="rps-container">
                     <h2 class="section-title">Камінь - ножиці - папір</h2>
                     <div class="rps-buttons">
@@ -94,7 +104,7 @@
 
             <div class="main-line"></div>
 
-            <section class="calculator">
+            <section class="calculator" id="calculator">
                 <h2 class="section-title">Калькулятор</h2>
                 <div class="calculator-wrapper">
                     <input type="number" class="calculator-first-input section-input" placeholder="Введіть число" />
@@ -122,7 +132,7 @@
 
             <div class="main-line"></div>
 
-            <section class="time-section">
+            <section class="time-section" id="time-section">
                 <h2 class="time-h2 section-title">Калькулятор часу</h2>
                 <div class="time-input-box">
                     <input type="number" class="input-time section-input" id="input-time" placeholder="Введіть число" />
@@ -133,14 +143,14 @@
 
             <div class="main-line"></div>
 
-            <section class="dino">
+            <section class="dino" id="dino">
                 <h2 class="dino-h2 section-title">Google динозавр</h2>
                 <canvas id="board"></canvas>
             </section>
 
             <div class="main-line"></div>
 
-            <section class="foodball">
+            <section class="foodball" id="foodball">
                 <h2 class="section-title">Футбол</h2>
                 <div class="pitch" id="pitch">
                     <div class="ball" id="ball" aria-hidden="true">
@@ -151,47 +161,60 @@
 
             <div class="main-line"></div>
 
-            <section class="three-number">
+            <section class="three-number" id="three-number">
                 <div class="three-numbers-container">
                     <h2 class="section-title">Введіть 3 числа</h2>
 
                     <div class="inputs">
-                        <input class="threenumbervvestu" type="number" id="num1" placeholder="Введіть число" />
-                        <input class="threenumbervvestu" type="number" id="num2" placeholder="Введіть число" />
-                        <input class="threenumbervvestu" type="number" id="num3" placeholder="Введіть число" />
+                        <input class="section-input" type="number" id="num1" placeholder="Введіть число" />
+                        <input class="section-input" type="number" id="num2" placeholder="Введіть число" />
+                        <input class="section-input" type="number" id="num3" placeholder="Введіть число" />
                     </div>
-
-                    <div class="note">
-                        <p id="result">Найбільше число, яке ви ввели – (число)</p>
-                    </div>
+                    <p id="result">Найбільше число, яке ви ввели – (число)</p>
                 </div>
             </section>
 
             <div class="main-line"></div>
 
-            <section class="team">
+            <section class="team" id="team">
                 <h2 class="section-title">Наша команда</h2>
-
                 <div class="slider-wrapper">
                     <div class="slider-arrow left-arrow"></div>
 
                     <div class="sliders">
-                        <div class="slide s-active">
-                            <img src="#" alt="" />
-                            <h3>Ім’я студента1</h3>
-                            <p>Інформація про роботу, яку він/вона виконав/ла</p>
+
+                        <div class="slide">
+                            <img src="./img/milana.jpg" alt="" />
+                            <h3>Мілана</h3>
+                            <p>Виконала такі секція як:</p>
+                            <ul>
+                                <li>- Перевір в який рік ти народився</li>
+                                <li>- Калькулятор часу</li>
+                                <li>- Google динозавр</li>
+                            </ul>
                         </div>
 
                         <div class="slide">
-                            <img src="#" alt="" />
-                            <h3>Ім’я студента2</h3>
-                            <p>Інформація про роботу, яку він/вона виконав/ла</p>
+                            <img src="./img/sofia.jpg" alt="" />
+                            <h3>Софія</h3>
+                            <p>Виконала такі секція як:</p>
+                            <ul>
+                                <li>- Камінь - ножиці - папір</li>
+                                <li>- Калькулятор</li>
+                                <li>- Наша команда</li>
+                                <li>- Обери вченого/их</li>
+                            </ul>
                         </div>
 
                         <div class="slide">
-                            <img src="#" alt="" />
-                            <h3>Ім’я студента3</h3>
-                            <p>Інформація про роботу, яку він/вона виконав/ла</p>
+                            <img src="./img/artem.jpg" alt="" />
+                            <h3>Артем</h3>
+                            <p>Виконав такі секція як:</p>
+                            <ul>
+                                <li>- Вгадай число, яке загадав комп’ютер</li>
+                                <li>- Футбол</li>
+                                <li>- Введіть 3 числа</li>
+                            </ul>
                         </div>
                     </div>
 
@@ -202,7 +225,7 @@
 
             <div class="main-line"></div>
 
-            <section class="choose-scientist">
+            <section class="choose-scientist" id="choose-scientist">
                 <h2 class="section-title">Обери вченого/их</h2>
 
                 <div class="scientists"></div>
@@ -241,7 +264,7 @@
         </div>
     </main>
 
-    <footer class="footer" data-inner>
+    <footer class="footer" id="footer" data-inner>
         <a href="#" class="logo"></a>
         <address class="contacts">
             Тел: <a href="#">+38 (123) 456 78 90</a><br />
@@ -258,7 +281,23 @@
             <small>*Підписавшись, Ви зможете ортимувати інформаццію про новинки на
                 сайті</small>
         </form>
-    </footer>
+    </footer> 
+
+    <div class="overlay fade"></div>
+
+    <div class="modal fade" id="modal-greeting">
+        <div class="modal-wrapper">
+            <button class="close-bth" onclick="closeAll()"></button>
+            <p>Привіт!<br>Ви потрапили на сайт інтерактивних ігор та завдань<br>Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br>Бажаємо Вам гарно провести час!</p>
+            <p>Введіть своє ім’я:</p>
+            <input type="text" class="section-input" id="modal-username" placeholder="Ваше ім’я...">
+            <button class="section-btn" id="modal-btn">Зберегти</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-thank">
+        <h3>Дякую за підписку!</h3>
+    </div>
 
     <script src="./js/index.js"></script>
     <script src="./js/visokosniy.js"></script>
@@ -266,7 +305,7 @@
     <script src="./js/rock-paper-scissors.js"></script>
     <script src="./js/calculator.js"></script>
     <script src="./js/time.js"></script>
-    <script src="./js/dino.js"></script>
+    <!-- <script src="./js/dino.js"></script> -->
     <script src="./js/foodball.js"></script>
     <script src="./js/three-number.js"></script>
     <script src="./js/slider.js"></script>
