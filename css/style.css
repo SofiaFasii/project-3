@@ -61,8 +61,11 @@ body {
     background-color: #000000;
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
     cursor: pointer;
+    transition: background-color .1s ease;
 }
-
+.section-btn:hover{
+    background-color: #338aac;
+}
 /*  ---- header ---- */
 .header {
     position: fixed;
@@ -74,7 +77,6 @@ body {
     width: 100%;
     border: 1px solid #6868682f;
 }
-
 .header-container {
     display: flex;
     align-items: center;
@@ -257,8 +259,11 @@ a {
     background-color: #000000;
     box-shadow: 0px 2px 2px 0px #bdbdbdcb;
     cursor: pointer;
+    transition: background-color .1s ease;
 }
-
+.input-btn:hover{
+    background-color: #338aac;
+}
 .computernumber {
     width: 576px;
 }
@@ -383,13 +388,29 @@ a {
     width: 125px;
     border-radius: 20px 0 0 20px;
 }
+.dino{
+    position: relative;
+}
 #board {
     display: block;
     background: #ffffff;
     border: 2px solid #6d6d6d3b;
-    position: relative;
 }
-
+.start-btn, .restart-btn{
+    position: absolute;
+    top: 170px;
+    left: 45%;
+    display: block;
+    border: none;
+    text-align: center;
+    background-color: #9696965d;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+.restart-btn{
+    left: 44%;
+    display: none;
+}
 .pitch {
     background: var(--pitch-bg);
     border: 2px solid var(--border);
@@ -720,4 +741,7 @@ input.error {
     background-position: 43px 60px, 95px 120px, 350px 60px, 305px 120px;
     background-size: 34px 34px;
     z-index: 240;
+}
+.header a:hover, .dropdown span:hover, .footer p:hover, .footer a:hover{
+    color: #338aac;
 }
