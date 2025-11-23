@@ -12,12 +12,12 @@ function closeAll(){
   hideModal(document.getElementById('modal-thank'));
   hideModal(document.querySelector('.overlay'));
 }
-window.onload = () => {
+window.addEventListener('load', () => {
   const overlay = document.querySelector('.overlay');
   const modalGreeting = document.getElementById('modal-greeting');
   showModal(overlay);
   showModal(modalGreeting);
-}
+})
 document.getElementById('modal-btn').addEventListener('click', () => {
   const input = document.getElementById('modal-username');
   let name = input.value.trim();

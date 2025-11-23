@@ -110,6 +110,10 @@ function moveDino(e){
         return
     }
 
+    if(e.code === 'Space'){
+        e.preventDefault();
+    }
+
     if ((e.code == "Space" || e.code == "ArrowUp") && dino.y == dinoY) {
         velocityY = -10
     }
