@@ -37,8 +37,10 @@ let gravity = .4
 
 let gameOver = false
 let score = 0 
+let cactusInterval
+let animationRunning = false
 
-window.onload = function() {
+window.addEventListener('load', () => {
     board = document.getElementById('board')
     board.height = boardHeight
     board.width = boardWidth
@@ -63,14 +65,39 @@ window.onload = function() {
     cactus3Img = new Image()
     cactus3Img.src = "./img/cactus3.png"
 
-    requestAnimationFrame(update)
-    setInterval(placeCactus, 1000)
     document.addEventListener("keydown", moveDino)
-}
+    const startBtn = document.querySelector('.start-btn')
+    startBtn.addEventListener('click', () => {
+        startBtn.style.display = 'none';
+        startGame()
+    })
+    const restartBtn = document.querySelector('.restart-btn')
+    restartBtn.addEventListener('click', () => {
+        restartBtn.style.display = 'none'
+        startGame()
+    })
+})
+function startGame(){
+    gameOver = false
+    score = 0
+    dino.y = dinoY
+    cactusArray = []
+    if(cactusInterval){
+        clearInterval(cactusInterval)
+    }
+    cactusInterval = setInterval(placeCactus, 800);
 
+    velocityX = -8
+    velocityY = 0
+
+    if (!animationRunning){
+        animationRunning = true
+        requestAnimationFrame(update)
+    }
+}
 function update() {
-    requestAnimationFrame(update)
     if (gameOver) {
+        animationRunning = false
         return
     }
 
@@ -93,25 +120,35 @@ function update() {
             dinoImg.onload = function() {
                 context.drawImage(dinoImg, dino.x, dino.y, dino.width, dino.height)
             }
+            document.querySelector('.restart-btn').style.display = 'block'
         }
    
     }
-}
+    velocityX -= 0.004;
 
-//score
-context.fillStyle="black";
-context.font="20px courier";
-score++;
-context.fillText(score, 5, 20);
+
+    //score
+
+    context.font="20px courier";
+    score++;
+    context.fillText(score, 5, 20);
+
+    requestAnimationFrame(update)
+}
 
 function moveDino(e){
     if (gameOver) {
         return
     }
 
+    if(e.code === 'Space'){
+        e.preventDefault()
+    }
+
     if ((e.code == "Space" || e.code == "ArrowUp") && dino.y == dinoY) {
         velocityY = -10
     }
+    
 }
 
 function placeCactus() {
@@ -120,7 +157,7 @@ function placeCactus() {
         img : null,
         x : cactusX,
         y : cactusY,
-        with : null,
+        width : null,
         height : cactusHeight
     }
     let placeCactusChance = Math.random()

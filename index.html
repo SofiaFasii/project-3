@@ -2,35 +2,45 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coding Magic</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="shortcut icon" href="#" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500&display=swap"
-        rel="stylesheet">
+        rel="stylesheet" />
 </head>
 
 <body>
     <header class="header">
         <div class="header-container" data-inner>
-            <a href="#" class="logo"></a>
-            <nav class="nav">
-                <div class="dropdown">
-                    <button class="drop-btn">
-                        <span>Інтерактив</span><span class="arrow"><img src="./img/header-arrow.svg" alt="#"></span>
-                    </button>
-                    <div class="dropdown-content">
-                        <a href="#">Числовий</a>
-                        <a href="#">Ігровий</a>
-                        <a href="#">Ознайомчий</a>
+            <div class="header-wrapper">
+                <a href="#" class="logo"></a>
+                <nav class="nav">
+                    <div class="dropdown">
+                        <button class="drop-btn">
+                            <span>Інтерактив</span><span class="arrow"><img src="./img/header-arrow.svg"
+                                    alt="#" /></span>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#visokosniy">Перевір рік народження</a>
+                            <a href="#computernumber">Вгадай число</a>
+                            <a href="#rps">Камінь-ножиці-папір</a>
+                            <a href="#calculator">Калькулятор</a>
+                            <a href="#time-section">Калькулятор часу</a>
+                            <a href="#dino">Google динозавр</a>
+                            <a href="#foodball">Футбол</a>
+                            <a href="#three-number">Введіть<br>3 числа</a>
+                            <a href="#choose-scientist">Обери вченого/их</a>
+                        </div>
                     </div>
-                </div>
-                <a href="#">Наша команда</a>
-                <a href="#">Контакти</a>
-            </nav>
+                    <a href="#team">Наша команда</a>
+                    <a href="#footer">Контакти</a>
+                </nav>
+            </div>
             <div class="header-group">
                 <button class="theme-toggle" id="theme-toggle"></button>
                 <p>Вітаємо, <span id="username">User</span>!</p>
@@ -40,17 +50,16 @@
 
     <main class="main">
         <div class="main-container" data-inner>
-
             <h1 class="main-title">Популярні інетрактивні ігри</h1>
 
             <div class="main-line"></div>
 
-            <section class="year-visokosniy-section">
+            <section class="year-visokosniy-section" id="visokosniy">
                 <h2 class="section-title">Перевір в який рік ти народився</h2>
                 <div class="yvs-wrapper">
                     <div class="input-box">
                         <input type="number" class="input-year section-input" id="year-input"
-                            placeholder="Введіть рік народження">
+                            placeholder="Введіть рік народження" />
                         <button id="check-btn-year" class="button-year input-btn" onclick="result()"></button>
                     </div>
                     <p id="result-year"></p>
@@ -71,11 +80,9 @@
                 </div>
             </section>
 
-
-
             <div class="main-line"></div>
 
-            <section class="rock-paper-scissors">
+            <section class="rock-paper-scissors" id="rps">
                 <div class="rps-container">
                     <h2 class="section-title">Камінь - ножиці - папір</h2>
                     <div class="rps-buttons">
@@ -89,127 +96,211 @@
                         </div>
                     </div>
                     <p class="rps-result">Почати раунд &#8681;</p>
-                    <button class="computer-option section-btn" onclick="playRound()">Варіант комп’ютера</button>
+                    <button class="computer-option section-btn" onclick="playRound()">
+                        Варіант комп’ютера
+                    </button>
                 </div>
             </section>
 
             <div class="main-line"></div>
 
-            <section class="calculator">
+            <section class="calculator" id="calculator">
                 <h2 class="section-title">Калькулятор</h2>
                 <div class="calculator-wrapper">
-                    <input type="number" class="calculator-first-input section-input" placeholder="Введіть число">
+                    <input type="number" class="calculator-first-input section-input" placeholder="Введіть число" />
                     <div class="calculator-buttons">
-                        <button class="item section-btn" onclick="calculatorSetOperation('+')">+</button>
-                        <button class="item section-btn" onclick="calculatorSetOperation('*')">*</button>
-                        <button class="item section-btn" onclick="calculatorSetOperation('-')">-</button>
-                        <button class="item section-btn" onclick="calculatorSetOperation('/')">/</button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('+')">
+                            +
+                        </button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('*')">
+                            *
+                        </button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('-')">
+                            -
+                        </button>
+                        <button class="item section-btn" onclick="calculatorSetOperation('/')">
+                            /
+                        </button>
                     </div>
-                    <input type="number" class="calculator-second-input section-input" placeholder="Введіть число">
-                    <button class="item equals section-btn" onclick="calculator()">=</button>
+                    <input type="number" class="calculator-second-input section-input" placeholder="Введіть число" />
+                    <button class="item equals section-btn" onclick="calculator()">
+                        =
+                    </button>
                     <span class="calculator-result section-input">Результат</span>
                 </div>
             </section>
 
             <div class="main-line"></div>
 
-            <section class="time-section">
+            <section class="time-section" id="time-section">
                 <h2 class="time-h2 section-title">Калькулятор часу</h2>
                 <div class="time-input-box">
-                    <input type="number" class="time-input" id="input-time" placeholder="Введіть число">
-                    <button class="time-button" id="check-time-btn"></button>
+                    <input type="number" class="input-time section-input" id="input-time" placeholder="Введіть число" />
+                    <button class="input-btn" id="check-time-btn"></button>
                 </div>
                 <p id="time-result"></p>
             </section>
 
             <div class="main-line"></div>
 
-       
-
-            <div class="main-line"></div>
-
-            <section class="dino">
+            <section class="dino" id="dino">
                 <h2 class="dino-h2 section-title">Google динозавр</h2>
                 <canvas id="board"></canvas>
+                <button class="start-btn">Почати гру</button>
+                <button class="restart-btn">Почати знову</button>
             </section>
 
             <div class="main-line"></div>
 
-            <section class="foodball">
-                <div class="container">
-                    <h2 class="h2footbol">Футбол</h2>
-                    <div class="pitch" id="pitch">
-                        <div class="ball" id="ball" aria-hidden="true">
-                            <img src="./img/football.png" width="50" height="50" />
-                        </div>
+            <section class="foodball" id="foodball">
+                <h2 class="section-title">Футбол</h2>
+                <div class="pitch" id="pitch">
+                    <div class="ball" id="ball" aria-hidden="true">
+                        <img src="./img/football.png" width="50" height="50" />
                     </div>
                 </div>
             </section>
+
             <div class="main-line"></div>
-    <section class="three-number">
-        <div class="three-numbers-container">
-            <h2 class="vedit3chislah2">Введіть 3 числа</h2>
-    
-            <div class="inputs">
-                <input class="threenumbervvestu" type="number" id="num1" placeholder="Введіть число">
-                <input class="threenumbervvestu" type="number" id="num2" placeholder="Введіть число">
-                <input class="threenumbervvestu" type="number" id="num3" placeholder="Введіть число">
-            </div>
 
-            <div class="note" <p id="result">Найбільше число, яке ви ввели – (число)</p>
-            </div>
-    </section>
-            <section class="team">
-                <h2 class="section-title">Наша команда</h2>
+            <section class="three-number" id="three-number">
+                <div class="three-numbers-container">
+                    <h2 class="section-title">Введіть 3 числа</h2>
 
-                <div class="carousel-wrapper">
-                    <div class="arrow"></div>
-                    <div class="arrow"></div>
+                    <div class="inputs">
+                        <input class="section-input" type="number" id="num1" placeholder="Введіть число" />
+                        <input class="section-input" type="number" id="num2" placeholder="Введіть число" />
+                        <input class="section-input" type="number" id="num3" placeholder="Введіть число" />
+                    </div>
+                    <p id="result">Найбільше число, яке ви ввели – (число)</p>
                 </div>
             </section>
 
             <div class="main-line"></div>
 
-            <section class="choose-scientist">
+            <section class="team" id="team">
+                <h2 class="section-title">Наша команда</h2>
+                <div class="slider-wrapper">
+                    <div class="slider-arrow left-arrow"></div>
+
+                    <div class="sliders">
+
+                        <div class="slide">
+                            <img src="./img/milana.jpg" alt="" />
+                            <h3>Мілана</h3>
+                            <p>Виконала такі секція як:</p>
+                            <ul>
+                                <li>- Перевір в який рік ти народився</li>
+                                <li>- Калькулятор часу</li>
+                                <li>- Google динозавр</li>
+                            </ul>
+                        </div>
+
+                        <div class="slide">
+                            <img src="./img/sofia.jpg" alt="" />
+                            <h3>Софія</h3>
+                            <p>Виконала такі секція як:</p>
+                            <ul>
+                                <li>- Камінь - ножиці - папір</li>
+                                <li>- Калькулятор</li>
+                                <li>- Наша команда</li>
+                                <li>- Обери вченого/их</li>
+                            </ul>
+                        </div>
+
+                        <div class="slide">
+                            <img src="./img/artem.jpg" alt="" />
+                            <h3>Артем</h3>
+                            <p>Виконав такі секція як:</p>
+                            <ul>
+                                <li>- Вгадай число, яке загадав комп’ютер</li>
+                                <li>- Футбол</li>
+                                <li>- Введіть 3 числа</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="slider-arrow right-arrow"></div>
+                </div>
+                <div class="points"></div>
+            </section>
+
+            <div class="main-line"></div>
+
+            <section class="choose-scientist" id="choose-scientist">
                 <h2 class="section-title">Обери вченого/их</h2>
 
                 <div class="scientists"></div>
 
                 <div class="cs-buttons">
-                    <button class="section-btn born-in-19th">Які вчені народилися в 19 ст.</button>
-                    <button class="section-btn year-albert">Знайти рік народження Albert Einshtein</button>
-                    <button class="section-btn sort-by-abc">Відсортувати вчених за алфавітом</button>
-                    <button class="section-btn surname-c">Знайти вчених, прізвища яких починаються на на літеру “С”
+                    <button class="section-btn born-in-19th">
+                        Які вчені народилися в 19 ст.
                     </button>
-                    <button class="section-btn sort-by-age">Відсортувати вчених за кількістю прожитих років</button>
-                    <button class="section-btn name-a">Знайти всіх вчених, ім’я яких починається на “А”</button>
-                    <button class="section-btn late-born">Знайти вченого, який народився найпізніше</button>
-                    <button class="section-btn long-and-short">Знайти вченого, який прожив найдовше і вченого,<br> який
-                        прожив найменше</button>
-                    <button class="section-btn coincidence">Знайти вчених, в яких співпадають перші літери імені і
-                        прізвища</button>
+                    <button class="section-btn year-albert">
+                        Знайти рік народження Albert Einshtein
+                    </button>
+                    <button class="section-btn sort-by-abc">
+                        Відсортувати вчених за алфавітом
+                    </button>
+                    <button class="section-btn surname-c">
+                        Знайти вчених, прізвища яких починаються на на літеру “С”
+                    </button>
+                    <button class="section-btn sort-by-age">
+                        Відсортувати вчених за кількістю прожитих років
+                    </button>
+                    <button class="section-btn name-a">
+                        Знайти всіх вчених, ім’я яких починається на “А”
+                    </button>
+                    <button class="section-btn late-born">
+                        Знайти вченого, який народився найпізніше
+                    </button>
+                    <button class="section-btn long-and-short">
+                        Знайти вченого, який прожив найдовше і вченого,<br />
+                        який прожив найменше
+                    </button>
+                    <button class="section-btn coincidence">
+                        Знайти вчених, в яких співпадають перші літери імені і прізвища
+                    </button>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer class="footer" data-inner>
+    <footer class="footer" id="footer" data-inner>
         <a href="#" class="logo"></a>
         <address class="contacts">
-            Тел: <a href="#">+38 (123) 456 78 90</a><br>
-            E-Mail: <a href="#">codingmagic@gmail.com</a><br>
-            Facebook: <a href="#">CodingMagic</a><br>
-            Twitter: <a href="#">CodingMagic</a><br>
-            Instagram: <a href="#">CodingMagic</a>
+            <p>Тел: <a href="#">+38 (123) 456 78 90</a></p>
+            <p></p>
+            <p>E-Mail: <a href="#">codingmagic@gmail.com</a><br/></p>
+            <p>Facebook: <a href="#">CodingMagic</a><br/></p>
+            <p>Twitter: <a href="#">CodingMagic</a><br/></p>
+            <p>Instagram: <a href="#">CodingMagic</a></p>
         </address>
         <form class="form-contact">
             <div class="footer-box">
-                <input class="section-input" type="text" placeholder="Ваша ел. адреса...">
+                <input class="section-input" type="text" placeholder="Ваша ел. адреса..." />
                 <button class="section-btn">Підписатись</button>
             </div>
-            <small>*Підписавшись, Ви зможете ортимувати інформаццію про новинки на сайті</small>
+            <small>*Підписавшись, Ви зможете ортимувати інформаццію про новинки на
+                сайті</small>
         </form>
-    </footer>
+    </footer> 
+
+    <div class="overlay fade"></div>
+
+    <div class="modal fade" id="modal-greeting">
+        <div class="modal-wrapper">
+            <button class="close-bth" onclick="closeAll()"></button>
+            <p>Привіт!<br>Ви потрапили на сайт інтерактивних ігор та завдань<br>Надіємось, що вам сподобається і ви отримаєте позитивні емоції!<br>Бажаємо Вам гарно провести час!</p>
+            <p>Введіть своє ім’я:</p>
+            <input type="text" class="section-input" id="modal-username" placeholder="Ваше ім’я...">
+            <button class="section-btn" id="modal-btn">Зберегти</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modal-thank">
+        <h3>Дякую за підписку!</h3>
+    </div>
 
     <script src="./js/index.js"></script>
     <script src="./js/visokosniy.js"></script>
@@ -218,9 +309,9 @@
     <script src="./js/calculator.js"></script>
     <script src="./js/time.js"></script>
     <script src="./js/dino.js"></script>
-    <script src='./js/foodball.js'></script>
+    <script src="./js/foodball.js"></script>
     <script src="./js/three-number.js"></script>
-    <script src="./js/carousel.js"></script>
+    <script src="./js/slider.js"></script>
     <script src="./js/choose-scientist.js"></script>
 </body>
 

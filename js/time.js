@@ -4,11 +4,13 @@ const resultTime = document.getElementById('time-result');
 
 
     buttonTime.addEventListener('click', () => {
-        const value = inputTime.value.trim() 
-        const hours = Math.floor(value / 60)
-        const minutes = value % 60
+        let value = inputTime.value.trim() 
+        const days = Math.floor(value / 1440);
+        value %= 1440; 
+        const hours = Math.floor(value / 60);
+        const minutes = value % 60;
         
-        resultTime.textContent = `${hours}:${minutes}`
+        resultTime.textContent = `${days} дн. ${hours}:${minutes}`
     })
 
 
