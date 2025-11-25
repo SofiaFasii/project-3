@@ -56,3 +56,10 @@ document.querySelectorAll('.dropdown-content a').forEach(element => {
     });
   });
 });
+//theme
+
+const themeBtn = document.querySelector('.theme-toggle');
+themeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+  document.section.classList.toggle('dark');
+})

@@ -94,6 +94,7 @@ function startGame(){
         animationRunning = true
         requestAnimationFrame(update)
     }
+    dinoImg.src = "./img/dino.png"
 }
 function update() {
     if (gameOver) {
